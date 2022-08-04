@@ -14,16 +14,10 @@ class circleArray {
     }
 
     get(index) {
-        if (index >= 0) {
-            index = index % this._arr.length;
-            return this._arr[index];
+        index = index % this._arr.length;
+        if (index < 0 && index !== -0) {
+            index = this._arr.length + index;
         }
-        else {
-            index = index % this._arr.length;
-            if (index !== -0) {
-                index = this._arr.length + index;
-            }
-            return this._arr[index];
-        }
+        return this._arr[index];
     }
 }
