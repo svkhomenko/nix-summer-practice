@@ -6,7 +6,7 @@
 // “isu[syv(stc]ts(crs))cs”) або відповідність кожнії дужці, що відкривається такого
 // ж типу, але такої, що закривається.
 
-function testString(str, inside = '', beginIndex = 0) {
+function testString(str) {
     str = str.replace(/[^\[\]\(\)]/g, '');
 
     while(str !== '') {
